@@ -14,11 +14,9 @@ class Firstpage extends StatelessWidget {
             'assest/anan2.jpg',
             fit: BoxFit.cover,
           ),
-        
           Container(
             color: Colors.grey.withOpacity(0.5),
           ),
-         
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
