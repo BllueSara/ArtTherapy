@@ -10,16 +10,15 @@ class Firstpage extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // صورة الخلفية
-          Image.asset(
-            'assest/anan2.jpg', // تأكد من المسار الصحيح لصورة الخلفية
+             Image.asset(
+            'assest/anan2.jpg',/
             fit: BoxFit.cover,
           ),
-          // Container مع اللون الرمادي الشفاف
+        
           Container(
-            color: Colors.grey.withOpacity(0.5), // تطبيق اللون الرمادي مع الشفافية
+            color: Colors.grey.withOpacity(0.5),
           ),
-          // المحتوى فوق الخلفية
+         
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -31,7 +30,7 @@ class Firstpage extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
               ),
-              const SizedBox(height: 20), // زيادة المسافة أسفل الشعار
+              const SizedBox(height: 20),
               const Text(
                 "مركز عنان للعلاج بالفن",
                 style: TextStyle(
@@ -40,7 +39,7 @@ class Firstpage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.italic),
               ),
-              const SizedBox(height: 0), // زيادة المسافة أسفل النص
+              const SizedBox(height: 0), 
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
