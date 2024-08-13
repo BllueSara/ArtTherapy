@@ -9,22 +9,19 @@ class Services2 extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // خلفية الصورة
         Opacity(
-          opacity: 0.7, // شفافية الصورة
+          opacity: 0.7, 
          child: Image.asset(
             'assest/anan2.jpg',
             fit: BoxFit.cover,
           ),
          ),
-          // المحتوى فوق الخلفية
           Column(
             children: [
-              // الصورة الأفقية في الأعلى
               Stack(
                 children: [
  Positioned(
-                    left: 0, // وضع السهم في الفراغ على اليسار
+                    left: 0, 
                     top: 50,
                     child: IconButton(
                       icon: Icon(
@@ -33,16 +30,16 @@ class Services2 extends StatelessWidget {
                         size: 30,
                       ),
                       onPressed: () {
-                        Navigator.pop(context); // العودة إلى الصفحة السابقة
+                        Navigator.pop(context); 
                       },
                     ),
                   ),
                   Container(
-                    width: 300, // عرض الصورة الأفقية بالكامل
-                    height: 150, // حجم الصورة الأفقية
-                    margin: EdgeInsets.symmetric(vertical: 50), // تعديل الهوامش
+                    width: 300, 
+                    height: 150, 
+                    margin: EdgeInsets.symmetric(vertical: 50), 
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15), // حواف دائرية
+                      borderRadius: BorderRadius.circular(15), 
                       image: DecorationImage(
                         image: AssetImage('assest/mw.jpg'),
                         fit: BoxFit.cover,
@@ -56,10 +53,10 @@ class Services2 extends StatelessWidget {
                 child: GridView.builder(
                   padding: EdgeInsets.all(10),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, // عدد الأعمدة في الشبكة
-                    crossAxisSpacing: 5, // تقليل المسافة بين الأعمدة
-                    mainAxisSpacing: 5, // تقليل المسافة بين الصفوف
-                    childAspectRatio: 0.99, // نسبة عرض إلى ارتفاع العناصر
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 5, 
+                    mainAxisSpacing: 5, 
+                    childAspectRatio: 0.99, 
                   ),
                   itemCount: 5,
                   itemBuilder: (context, index) {
@@ -96,22 +93,22 @@ class Services2 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          width: 120, // عرض الصورة العمودية
-          height: 120, // ارتفاع الصورة العمودية
+          width: 120, 
+          height: 120, 
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), // حواف دائرية للصورة
+            borderRadius: BorderRadius.circular(10), 
             image: DecorationImage(
               image: AssetImage(imagePath),
               fit: BoxFit.cover,
             ),
           ),
         ),
-        SizedBox(height: 4), // تقليل المسافة بين الصورة والنص
+        SizedBox(height: 4), 
         Text(
           title,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 14, // حجم النص
+            fontSize: 14, 
             fontWeight: FontWeight.bold,
           ),
           textAlign: TextAlign.center,
