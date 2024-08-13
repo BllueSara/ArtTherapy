@@ -11,7 +11,7 @@ class Firstpage extends StatelessWidget {
         fit: StackFit.expand,
         children: [
              Image.asset(
-            'assest/anan2.jpg',/
+            'assest/anan2.jpg',
             fit: BoxFit.cover,
           ),
         
