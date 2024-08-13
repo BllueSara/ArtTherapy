@@ -2,7 +2,7 @@
 
 import 'package:artfinal/screen/Services2.dart';
 import 'package:flutter/material.dart';
- // تأكد من إضافة هذا السطر
+
 
 class Services extends StatelessWidget {
   List<String> Art = [
@@ -35,14 +35,14 @@ class Services extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 100, // يوفر مساحة من الأعلى للجزء العلوي
+                    height: 100, 
                   ),
                 ],
               ),
             ),
           ),
           Positioned(
-            top: 40, // تعديل المسافة من الأعلى
+            top: 40, 
             left: 0,
             right: 0,
             child: Container(
@@ -57,7 +57,7 @@ class Services extends StatelessWidget {
                         color: Color.fromARGB(255, 70, 116, 70),
                         size: 30,
                       ),
-                      SizedBox(width: 10), // مساحة بين الأيقونة والنص
+                      SizedBox(width: 10), 
                       Text(
                         "الرياض",
                         style: TextStyle(
@@ -74,7 +74,7 @@ class Services extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 120, // المسافة بين النص "الرياض" وحقل البحث
+            top: 120, 
             left: 20,
             right: 20,
             child: Stack(
@@ -94,15 +94,15 @@ class Services extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  right: 10, // المسافة من اليمين إلى الأيقونة
-                  top: 8, // المسافة من الأعلى إلى الأيقونة
+                  right: 10, 
+                  top: 8, 
                   child: InkWell(
                     onTap: () {},
                     child: Container(
                       padding: EdgeInsets.all(5),
                       decoration: BoxDecoration(
                         color: Color.fromARGB(
-                            123, 125, 167, 125), // خلفية الأيقونة
+                            123, 125, 167, 125),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Icon(
@@ -117,23 +117,23 @@ class Services extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 200, // المسافة بين حقل البحث والصورة
+            top: 200, 
             left: 20,
             right: 20,
             child: Container(
-              width: MediaQuery.of(context).size.width / 1.2, // زيادة عرض الصورة
-              height: 200, // زيادة ارتفاع الصورة
+              width: MediaQuery.of(context).size.width / 1.2, 
+              height: 200, 
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15), // حواف دائرية
+                borderRadius: BorderRadius.circular(15), 
                 image: DecorationImage(
                   image: AssetImage("assest/m1.jpg"),
-                  fit: BoxFit.cover, // لضبط الصورة لتغطية المساحة
+                  fit: BoxFit.cover, 
                 ),
               ),
             ),
           ),
           Positioned(
-            top: 420, // المسافة بين الصورة والنص
+            top: 420, 
             left: 20,
             right: 20,
             child: Row(
@@ -144,7 +144,7 @@ class Services extends StatelessWidget {
                   child: Text(
                     "العلاجات",
                     style: TextStyle(
-                      color: Colors.white, // لون النص الأبيض
+                      color: Colors.white, 
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -154,13 +154,13 @@ class Services extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Services2()), // انتقل إلى الصفحة الجديدة
+                      MaterialPageRoute(builder: (context) => Services2()), 
                     );
                   },
                   child: Text(
                     "إظهار الكل",
                     style: TextStyle(
-                      color: Colors.white, // لون النص الأبيض
+                      color: Colors.white, 
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -170,31 +170,31 @@ class Services extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 470, // المسافة بين النص والعناصر الأفقية
+            top: 470, 
             left: 20,
             right: 20,
             child: Container(
-              height: 150, // ارتفاع الحاوية
+              height: 150, 
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  SizedBox(width: 10), // مساحة من اليسار
+                  SizedBox(width: 10), 
                   _buildItem('assest/H.jpg', 'العلاج بالحركة'),
-                  SizedBox(width: 10), // مساحة بين العناصر
+                  SizedBox(width: 10),
                   _buildItem('assest/D.jpg', 'العلاج بالدراما'),
-                  SizedBox(width: 10), // مساحة بين العناصر
+                  SizedBox(width: 10), 
                   _buildItem('assest/M.jpg', 'العلاج بالموسيقى'),
-                  SizedBox(width: 10), // مساحة بين العناصر
+                  SizedBox(width: 10), 
                   _buildItem('assest/R.jpg', 'العلاج بالرسم'),
-                  SizedBox(width: 10), // مساحة بين العناصر
+                  SizedBox(width: 10),
                   _buildItem('assest/K.jpg', 'العلاج بالكتابة'),
-                  SizedBox(width: 10), // مساحة من اليمين
+                  SizedBox(width: 10), 
                 ],
               ),
             ),
           ),
           Positioned(
-            top: 500, // المسافة بين العناصر الأفقية والصورة الإضافية
+            top: 500, 
             left: 20,
             right: 20,
             child: Column(
@@ -203,7 +203,7 @@ class Services extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        height: 120, // ارتفاع الصورة
+                        height: 120, 
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
@@ -213,10 +213,10 @@ class Services extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10), // مساحة بين الصور
+                    SizedBox(width: 10), 
                     Expanded(
                       child: Container(
-                        height: 120, // ارتفاع الصورة
+                        height: 120, 
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
@@ -228,9 +228,9 @@ class Services extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10), // مساحة بين الصفوف
+                SizedBox(height: 10),
                 Container(
-                  height: 120, // ارتفاع الصورة
+                  height: 120, 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
@@ -249,13 +249,13 @@ class Services extends StatelessWidget {
 
   Widget _buildItem(String imagePath, String text) {
     return Container(
-      width: 120, // عرض العنصر
+      width: 120, 
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            width: 100, // عرض الصورة
-            height: 100, // ارتفاع الصورة
+            width: 100, 
+            height: 100, 
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
