@@ -9,7 +9,7 @@ class Loginpage extends StatefulWidget {
 }
 
 class _LoginpageState extends State<Loginpage> {
-  bool _obscureText = true; // متغير للتحكم في إظهار أو إخفاء النص
+  bool _obscureText = true; 
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +25,10 @@ class _LoginpageState extends State<Loginpage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // تأكد من أن الصورة موجودة في المسار الصحيح
           Image.asset(
             'assest/anan2.jpg',
-            fit: BoxFit.cover, // لضمان تغطية الصورة لكامل الخلفية
+            fit: BoxFit.cover, 
           ),
-          // إذا لم تكن بحاجة إلى حاوية التزيين الشفافة، يمكنك إزالتها
            Container(
             decoration: BoxDecoration(
              color: Colors.grey.withOpacity(0.5),
@@ -41,7 +39,7 @@ class _LoginpageState extends State<Loginpage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-               SizedBox(height: 50,) ,// وضع اللوجو في الوسط
+               SizedBox(height: 50,) ,
                 Center(
                   child: Image.asset(
                     'assest/Logo.png',
@@ -53,12 +51,11 @@ class _LoginpageState extends State<Loginpage> {
                   
                 ),
                 Padding(padding: EdgeInsets.all(10)),
-                const SizedBox(height: 30), // زيادة المسافة فوق النموذج
+                const SizedBox(height: 30), 
                 Padding(
                   padding: const EdgeInsets.all(10),
                   child: Column(
                     children: [
-                      // حقل البريد الإلكتروني
                       TextFormField(
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
@@ -77,9 +74,8 @@ class _LoginpageState extends State<Loginpage> {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      // حقل كلمة المرور
                       TextFormField(
-                        obscureText: _obscureText, // لجعل كلمة المرور غير مرئية بناءً على الحالة
+                        obscureText: _obscureText, 
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                           labelText: "Enter Password:",
@@ -90,13 +86,13 @@ class _LoginpageState extends State<Loginpage> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           prefixIcon: Icon(
-                            Icons.lock, // تغيير الأيقونة إلى أيقونة القفل
+                            Icons.lock, 
                             color: Colors.white,
                           ),
                           suffixIcon: IconButton(
                             onPressed: () {
                               setState(() {
-                                _obscureText = !_obscureText; // تبديل حالة إظهار النص
+                                _obscureText = !_obscureText;
                               });
                             },
                             icon: Icon(
